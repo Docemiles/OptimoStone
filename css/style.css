@@ -1,0 +1,159 @@
+*{
+    margin: 0px;
+    border: 0px;
+}
+body{
+    font-family: 'Goldman', cursive;
+    letter-spacing: 0px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+    background-color: rgb(51, 51, 51);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas:    "header nav"
+                            "main main"
+                            "products products"
+                            "desplegable desplegable"
+                            "form form"
+                            "footer footer";
+}
+.header{
+    grid-area: header;
+    background-color: rgba(31, 31, 31, 0.705);
+    display: flex;
+    flex-flow: nowrap;
+}
+header{
+    height: 100%;
+    display: flex;
+    flex-flow: nowrap;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    width: 60px;
+    margin-left: 10px;
+} 
+.nav{
+    grid-area: nav;
+    background-color: rgba(15, 15, 15, 0.705);
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-around;
+    text-align: right;
+}
+nav a{
+    color: rgba(255, 153, 0, 0.795);
+    background-color: rgba(8, 8, 8, 0.726);
+    text-decoration: none;
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+}
+nav :hover{
+    background-color: rgb(255, 153, 0);
+    color: rgba(8, 8, 8, 0.815);
+}
+h1{
+    color: rgb(255, 153, 0);
+    padding: 20px;
+}
+h2{
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+p{
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+.table{
+    margin: 20px;
+}
+th{
+    background-color: rgb(255, 153, 0);
+    border: 1px solid;
+    border: rgb(255, 153, 0);
+}
+td ul{
+    list-style: none;
+}
+.tableul{
+    list-style: none;
+}
+.title{
+    color:rgb(255, 153, 0);
+    font-family: "Big Shoulders Stencil Display", cursive; 
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 153, 0);
+}
+#form{
+    grid-area: form;
+    margin: 50px;
+    padding: 10px;
+    border-style: double;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    justify-content: center;
+    display: flex;
+}
+#form fieldset div{
+    border: 2px solid;
+}
+.main{
+    grid-area: main;
+}
+#products{
+    grid-area: products;
+    padding: 50px;
+    background-color: rgb(255, 255, 255);
+}
+#products ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+}
+#products ul a :hover{
+    opacity: 0.8;
+}
+#desplegable{
+grid-area: desplegable;
+background-color: rgb(255, 255, 255);
+}
+#carouselExampleIndicators{ 
+    grid-area: desplegable;
+    display: inline-block;
+    justify-content: center;
+    width: 800px;
+    height: 500px;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 8, 8, 0.692);
+    position: bottom;
+}
+footer ul li{
+    list-style: none;
+    color: silver;
+    text-align: left;
+    margin-left: 10px;
+    padding: 20px;
+}
+.animate__bounceInUp {
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+  }
